@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* ============================================================
+   AJP SOLUTIONS — Design Token System
+   Brand: Oak Brown (#C4763E) + Charcoal (#1E1E1E)
+   Tagline: Mastering Wood Colour and Design
+   Convention: CSS Variables (runtime) + Tailwind @theme (classes)
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   LIGHT MODE  (default)
+   ---------------------------------------------------------- */
+:root {
+  /* Backgrounds */
+  --color-background:        oklch(96.5% 0.018 55);    /* warm cream — F5EDE4 */
+  --color-foreground:        oklch(18.0% 0.055 48);    /* deep walnut text — 3D1A08 */
+
+  /* Primary — oak brown (dominant logo color) */
+  --color-primary:           oklch(56.0% 0.115 48);    /* #C4763E */
+  --color-primary-foreground: oklch(96.5% 0.018 55);   /* cream text on primary */
+
+  /* Secondary — dark walnut */
+  --color-secondary:         oklch(28.0% 0.070 45);    /* #7A3B1E */
+  --color-secondary-foreground: oklch(96.5% 0.018 55); /* cream on secondary */
+
+  /* Muted — light warm parchment */
+  --color-muted:             oklch(90.0% 0.025 55);    /* #E8D5C0 */
+  --color-muted-foreground:  oklch(45.0% 0.065 48);    /* #9E7A58 — mid oak */
+
+  /* Accent — bright oak for hovers, badges, highlights */
+  --color-accent:            oklch(64.0% 0.120 48);    /* #D4915A — lighter oak */
+  --color-accent-foreground: oklch(14.0% 0.045 45);    /* dark walnut on accent */
+
+  /* Card / Surface */
+  --color-card:              oklch(100% 0 0);           /* pure white */
+  --color-card-foreground:   oklch(18.0% 0.055 48);    /* deep walnut */
+
+  /* Popover */
+  --color-popover:           oklch(100% 0 0);
+  --color-popover-foreground: oklch(18.0% 0.055 48);
+
+  /* Semantic — warm-harmonised, no cold clinical colors */
+  --color-destructive:       oklch(38.0% 0.120 30);    /* #8B2500 — burnt sienna */
+  --color-destructive-foreground: oklch(96.5% 0.018 55);
+  --color-success:           oklch(40.0% 0.095 130);   /* #4A6B2A — forest green */
+  --color-success-foreground: oklch(96.5% 0.018 55);
+  --color-warning:           oklch(58.0% 0.130 65);    /* #C47A00 — warm amber-gold */
+  --color-warning-foreground: oklch(14.0% 0.045 45);
+  --color-info:              oklch(45.0% 0.060 225);   /* #4A6880 — warm steel blue */
+  --color-info-foreground:   oklch(96.5% 0.018 55);
+
+  /* Borders & Focus */
+  --color-border:            oklch(75.0% 0.055 50);    /* #C8A882 — warm tan */
+  --color-input:             oklch(75.0% 0.055 50);
+  --color-ring:              oklch(56.0% 0.115 48);    /* matches primary */
+
+  /* Brand primitives (for gradients / illustrations) */
+  --color-brand-oak:         oklch(56.0% 0.115 48);    /* #C4763E — mid oak */
+  --color-brand-walnut:      oklch(28.0% 0.070 45);    /* #7A3B1E — dark walnut */
+  --color-brand-light-oak:   oklch(64.0% 0.120 48);    /* #D4915A — light oak */
+  --color-brand-cream:       oklch(96.5% 0.018 55);    /* #F5EDE4 — cream */
+  --color-brand-charcoal:    oklch(14.5% 0.008 0);     /* #1E1E1E — logo background */
+}
+
+/* ----------------------------------------------------------
+   DARK MODE  (.dark class on <html>)
+   ---------------------------------------------------------- */
+.dark {
+  /* Backgrounds */
+  --color-background:        oklch(10.5% 0.010 45);    /* #1A1410 — deep warm black */
+  --color-foreground:        oklch(93.0% 0.020 55);    /* #F5E0C8 — warm off-white */
+
+  /* Primary — lighten oak so it reads on dark bg */
+  --color-primary:           oklch(68.0% 0.115 48);    /* #D4915A — light oak */
+  --color-primary-foreground: oklch(10.5% 0.010 45);   /* near-black on bright oak */
+
+  /* Secondary — mid oak on dark */
+  --color-secondary:         oklch(56.0% 0.100 48);    /* #C4763E */
+  --color-secondary-foreground: oklch(10.5% 0.010 45);
+
+  /* Muted */
+  --color-muted:             oklch(18.0% 0.025 45);    /* #2A2018 — dark warm surface */
+  --color-muted-foreground:  oklch(60.0% 0.060 50);    /* #9E7A58 — mid-tone warm gray */
+
+  /* Accent */
+  --color-accent:            oklch(72.0% 0.110 50);    /* #E8B98A — golden highlight */
+  --color-accent-foreground: oklch(10.5% 0.010 45);
+
+  /* Card / Surface */
+  --color-card:              oklch(15.0% 0.020 45);    /* #241C14 — elevated dark oak */
+  --color-card-foreground:   oklch(93.0% 0.020 55);
+
+  /* Popover */
+  --color-popover:           oklch(18.0% 0.025 45);
+  --color-popover-foreground: oklch(93.0% 0.020 55);
+
+  /* Semantic — brightened for dark backgrounds */
+  --color-destructive:       oklch(55.0% 0.130 30);    /* lighter burnt red */
+  --color-destructive-foreground: oklch(10.5% 0.010 45);
+  --color-success:           oklch(58.0% 0.100 130);   /* lighter forest green */
+  --color-success-foreground: oklch(10.5% 0.010 45);
+  --color-warning:           oklch(72.0% 0.135 65);    /* bright amber-gold */
+  --color-warning-foreground: oklch(10.5% 0.010 45);
+  --color-info:              oklch(62.0% 0.070 225);   /* lighter steel */
+  --color-info-foreground:   oklch(10.5% 0.010 45);
+
+  /* Borders & Focus */
+  --color-border:            oklch(28.0% 0.040 45);    /* #3A2A1A — dark warm border */
+  --color-input:             oklch(28.0% 0.040 45);
+  --color-ring:              oklch(68.0% 0.115 48);    /* matches dark primary */
+
+  /* Brand primitives (unchanged hue, adjusted for dark) */
+  --color-brand-oak:         oklch(68.0% 0.115 48);    /* light oak on dark */
+  --color-brand-walnut:      oklch(45.0% 0.085 47);    /* mid walnut */
+  --color-brand-light-oak:   oklch(78.0% 0.110 52);    /* golden highlight */
+  --color-brand-cream:       oklch(93.0% 0.020 55);    /* warm off-white */
+  --color-brand-charcoal:    oklch(10.5% 0.010 45);    /* deep warm black */
+}
+
+/* ----------------------------------------------------------
+   TAILWIND v4 @theme — maps CSS vars → utility classes
+   Usage: bg-primary, text-foreground, border-border, etc.
+   ---------------------------------------------------------- */
+@theme {
+  --color-background:         var(--color-background);
+  --color-foreground:         var(--color-foreground);
+
+  --color-primary:            var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+
+  --color-secondary:          var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+
+  --color-muted:              var(--color-muted);
+  --color-muted-foreground:   var(--color-muted-foreground);
+
+  --color-accent:             var(--color-accent);
+  --color-accent-foreground:  var(--color-accent-foreground);
+
+  --color-card:               var(--color-card);
+  --color-card-foreground:    var(--color-card-foreground);
+
+  --color-popover:            var(--color-popover);
+  --color-popover-foreground: var(--color-popover-foreground);
+
+  --color-destructive:        var(--color-destructive);
+  --color-destructive-foreground: var(--color-destructive-foreground);
+
+  --color-success:            var(--color-success);
+  --color-success-foreground: var(--color-success-foreground);
+
+  --color-warning:            var(--color-warning);
+  --color-warning-foreground: var(--color-warning-foreground);
+
+  --color-info:               var(--color-info);
+  --color-info-foreground:    var(--color-info-foreground);
+
+  --color-border:             var(--color-border);
+  --color-input:              var(--color-input);
+  --color-ring:               var(--color-ring);
+
+  --color-brand-oak:          var(--color-brand-oak);
+  --color-brand-walnut:       var(--color-brand-walnut);
+  --color-brand-light-oak:    var(--color-brand-light-oak);
+  --color-brand-cream:        var(--color-brand-cream);
+  --color-brand-charcoal:     var(--color-brand-charcoal);
+}

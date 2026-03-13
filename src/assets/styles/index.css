@@ -1,0 +1,6 @@
+@import "./theme.css";
+
+/* Additional global styles can go here */
+html, body {
+  @apply bg-background text-foreground antialiased;
+}
