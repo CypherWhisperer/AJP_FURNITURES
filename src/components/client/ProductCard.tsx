@@ -4,7 +4,6 @@ import { Product } from '@/assets/types'
 import { Card, CardContent, CardHeader, CardTitle, Button } from '@/components/server'
 import Link from 'next/link'
 import { ShoppingBag } from 'lucide-react'
-import { useCart } from '@/assets/hooks'
 
 interface ProductCardProps {
   product: Product
