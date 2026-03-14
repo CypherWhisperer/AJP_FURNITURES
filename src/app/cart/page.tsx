@@ -5,11 +5,11 @@ import Image from 'next/image'
 import { Trash2 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Your Cart - Mavren',
+  title: 'Your Cart - AJP Furnitures',
   description: 'Review items in your cart.',
 }
 
-// Mock cart items mapping to the Arno/Mavren visual style
+// Mock cart items mapping to the Arno/AJP visual style
 const mockCartItems = [
   {
     id: '1',
@@ -39,7 +39,9 @@ export default function CartPage() {
       {/* Sleek Header */}
       <header className="w-full border-b border-border bg-white">
         <div className="container mx-auto flex h-20 items-center justify-between px-6 lg:px-12">
-          <Link href="/" className="text-2xl font-serif font-bold tracking-tight">Mavren</Link>
+          <Link href="/" className="flex items-center">
+            <Image src="/logo.jpg" alt="AJP Furnitures Logo" width={120} height={120} className="w-auto h-10 md:h-12 object-contain" priority />
+          </Link>
           <div className="flex gap-4">
             <Link href="/products" className="text-sm font-medium hover:text-primary transition-colors">Shop</Link>
             <Link href="/cart" className="text-sm font-medium text-primary transition-colors">Cart ({mockCartItems.length})</Link>

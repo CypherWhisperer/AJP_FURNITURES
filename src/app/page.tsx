@@ -5,23 +5,23 @@ import { MapPin, ShoppingBag, ShieldCheck, ArrowRight } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       {/* 
         PREMIUM NAVBAR 
         Transparent/Blur effect matching the modern aesthetic 
       */}
-      <header className="absolute top-0 z-50 w-full transition-all duration-300 bg-transparent text-foreground">
+      <header className="absolute top-0 z-50 w-full pt-6 transition-all duration-300 bg-transparent text-foreground">
         <div className="container mx-auto flex h-24 items-center justify-between px-6 lg:px-12">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-3xl font-serif font-bold tracking-tight">Mavren</span>
+          <Link href="/" className="flex items-center">
+            <Image src="/logo.jpg" alt="AJP Furnitures Logo" width={160} height={160} className="w-auto h-12 md:h-16 object-contain" priority />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
-            <Link href="/products" className="transition-colors hover:text-primary flex items-center gap-1">
-              Products <span className="text-xs opacity-50">▼</span>
+            <Link href="/products" className="transition-colors hover:text-primary">
+              Products
             </Link>
-            <Link href="/services" className="transition-colors hover:text-primary flex items-center gap-1">
-              Services <span className="text-xs opacity-50">▼</span>
+            <Link href="/services" className="transition-colors hover:text-primary">
+              Services
             </Link>
             <Link href="/collections" className="transition-colors hover:text-primary">
               Collections
@@ -55,15 +55,12 @@ export default function Home() {
         */}
         <section className="relative w-full h-[90vh] min-h-[600px] flex items-end pb-24 md:pb-32">
           {/* Background Image Container */}
-          <div className="absolute inset-x-4 inset-y-4 md:inset-x-8 md:inset-y-6 rounded-[2rem] overflow-hidden bg-muted">
-            {/* Fallback gradient if image not loaded, matching the reference's warm amber aesthetic */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-oak to-brand-walnut mix-blend-multiply opacity-90" />
+          <div className="absolute inset-x-4 inset-y-4 md:inset-x-8 md:inset-y-6 rounded-[2rem] overflow-hidden bg-black/20">
+            {/* Original image without aggressive blend modes for clear visibility */}
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center brightness-[0.85]" />
             
-            {/* Mocking the actual image using a styled div to represent the sofa photo */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-80 mix-blend-overlay" />
-            
-            {/* Gradient Overlay for text readability at the bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            {/* Gradient Overlay restricted towards the bottom for text readability */}
+            <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           </div>
 
           {/* Hero Content positioned over the image */}
@@ -135,7 +132,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { name: 'Living Room', img: 'https://images.unsplash.com/photo-1583847268964-b28e5a709c52?auto=format&fit=crop&w=800&q=80' },
+                { name: 'Living Room', img: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80' },
                 { name: 'Bedroom', img: 'https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=800&q=80' },
                 { name: 'Office', img: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80' },
                 { name: 'Outdoor', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80' }
@@ -163,7 +160,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-secondary/5" />
           <div className="container relative mx-auto px-6 lg:flex lg:items-center lg:justify-between">
             <div className="max-w-xl mb-10 lg:mb-0">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight mb-6">Partner with Mavren</h2>
+              <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight mb-6">Partner with AJP Furnitures</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Join our exclusive affiliate program. Share the beauty of artisanal furniture and earn up to 15% commission on every successful referral.
               </p>
@@ -182,7 +179,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <Link href="/" className="inline-block mb-6">
-                <span className="text-2xl font-serif font-bold tracking-tight text-foreground">Mavren</span>
+                <Image src="/logo.jpg" alt="AJP Furnitures Logo" width={160} height={160} className="w-auto h-16 object-contain" />
               </Link>
               <p className="text-muted-foreground max-w-sm">
                 Crafting exceptional furniture pieces that transform houses into homes. Specialized in oak and dark walnut.
@@ -206,7 +203,7 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-8 border-t border-border text-center md:flex md:justify-between md:text-left text-muted-foreground text-sm">
-            <p>&copy; {new Date().getFullYear()} Mavren Furniture. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} AJP Furnitures. All rights reserved.</p>
             <div className="mt-4 md:mt-0 flex space-x-4 justify-center">
               <span className="hover:text-foreground cursor-pointer transition-colors">Instagram</span>
               <span className="hover:text-foreground cursor-pointer transition-colors">Twitter</span>

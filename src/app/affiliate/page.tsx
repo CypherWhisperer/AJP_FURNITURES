@@ -25,9 +25,9 @@ export default async function AffiliateDashboardPage() {
     return (
       <div className="min-h-screen bg-[#FDFDFD] flex items-center justify-center p-6">
         <div className="max-w-xl w-full text-center space-y-8">
-          <Link href="/" className="inline-block text-3xl font-serif font-bold tracking-tight mb-8">Mavren</Link>
+          <Link href="/" className="inline-block text-3xl font-serif font-bold tracking-tight mb-8">AJP Furnitures</Link>
           <div className="space-y-4">
-            <h1 className="text-4xl lg:text-5xl font-serif leading-tight">Join the Mavren Partner Program</h1>
+            <h1 className="text-4xl lg:text-5xl font-serif leading-tight">Join the AJP Furnitures Partner Program</h1>
             <p className="text-lg text-muted-foreground">Earn generous commissions by recommending our artisan collections.</p>
           </div>
           
@@ -59,7 +59,7 @@ export default async function AffiliateDashboardPage() {
       {/* Sidebar Navigation */}
       <aside className="w-64 border-r border-border bg-[#F7F7F7]/50 hidden lg:flex flex-col">
         <div className="h-20 flex items-center px-8 border-b border-border bg-white">
-          <Link href="/" className="text-2xl font-serif font-bold tracking-tight">Mavren</Link>
+          <Link href="/" className="text-2xl font-serif font-bold tracking-tight">AJP Furnitures</Link>
         </div>
         
         <nav className="flex-1 px-4 py-8 space-y-2">
@@ -98,13 +98,13 @@ export default async function AffiliateDashboardPage() {
       <main className="flex-1 flex flex-col max-h-screen overflow-y-auto">
         {/* Mobile Header (Hidden on Desktop) */}
         <header className="lg:hidden h-16 border-b border-border flex items-center px-4 bg-white sticky top-0 z-10">
-           <Link href="/" className="text-xl font-serif font-bold tracking-tight">Mavren</Link>
+           <Link href="/" className="text-xl font-serif font-bold tracking-tight">AJP Furnitures</Link>
         </header>
 
         <div className="p-6 lg:p-12 max-w-5xl mx-auto w-full">
           <div className="mb-12">
             <h1 className="text-3xl lg:text-4xl font-serif tracking-tight mb-2">Refer and Earn</h1>
-            <p className="text-muted-foreground">Invite your audience to Mavren and earn up to 5% commission on their first purchase.</p>
+            <p className="text-muted-foreground">Invite your audience to AJP Furnitures and earn up to 5% commission on their first purchase.</p>
           </div>
 
           <div className="bg-[#F7F7F7] rounded-3xl p-8 lg:p-10 border border-border/50 mb-12 shadow-sm">
